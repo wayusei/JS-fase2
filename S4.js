@@ -98,15 +98,15 @@
 
 //secuencia de fibonacci
 
-const fibonacci = fin => {
-    let serie = [];
-    serie[0] = 1;
-    serie[1] = 1;
-    for (let i = 2; i < fin; i++){
-        serie[i] = serie [i -2] + serie [i-1];
-    }
-    console.log(serie);
-}
+// const fibonacci = fin => {
+//     let serie = [];
+//     serie[0] = 1;
+//     serie[1] = 1;
+//     for (let i = 2; i < fin; i++){
+//         serie[i] = serie [i -2] + serie [i-1];
+//     }
+//     console.log(serie);
+// }
 
-fibonacci(8);
+// fibonacci(8);
 
