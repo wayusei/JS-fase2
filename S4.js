@@ -108,5 +108,5 @@ const fibonacci = fin => {
     console.log(serie);
 }
 
-fibonacci(10);
+fibonacci(8);
 
