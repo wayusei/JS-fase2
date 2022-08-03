@@ -1,12 +1,12 @@
 // Prework sesion 5
- const name2 = "John Doe";
+//  const name2 = "John Doe";
 
- console.log(name2); // "John Doe"
+//  console.log(name2); // "John Doe"
  
- function foo() {
-   console.log(name2); 
- }
+//  function foo() {
+//    console.log(name2); 
+//  }
  
- foo(); // "John Doe"
+//  foo(); // "John Doe"
  
  
