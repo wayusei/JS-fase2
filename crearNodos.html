@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <blockquote id="quote">
+        Morbi placerat imperdiet risus quis blandit. 
+        Ut lobortis elit luctus, feugiat erat vitae, 
+        interdum diam. 
+        Nam sit amet arcu vitae justo lacinia ultricies 
+        nec eget tellus. 
+        Curabitur id sapien massa. 
+        In hac habitasse platea dictumst. 
+        Integer tristique leo consectetur libero pretium pretium. 
+        Nunc sed mauris magna. 
+        Praesent varius purus id turpis iaculis iaculis. 
+        Nulla convallis magna nunc, id rhoncus massa ornare in. 
+        Donec et feugiat sem, ac rhoncus mauris. 
+        Quisque eget tempor massa.
+    </blockquote>
+
+    <script>
+        const h1 = document.createElement('h1');
+        console.log(h1);
+        const text = document.createTextNode('Hello world!');
+        console.log(text);
+
+        h1.appendChild(text);
+
+        function createNode(type, child){
+            const node = document.createElement(type);
+            
+            if(typeof child === 'string'){
+                const text = document.createTextNode(child);
+                node.appendChild(text);
+            }else{
+                node.appendChild(child);
+            }
+            return node;
+        }
+
+        console.log(createNode('h1', createNode('strong','Hello world 2!')));
+
+        document.getElementById('quote')
+            .appendChild(
+                createNode('footer', createNode('strong','-Epicuro'))
+            );
+    </script>
+</body>
+</html>
