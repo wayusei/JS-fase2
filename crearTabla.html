@@ -22,7 +22,7 @@
       function createTable(data) {
         let table = document.createElement('table');
         const headers = ['Name', 'Height', 'Place']
-        let headRow = document.createElement('tr');
+        let headTable = document.createElement('tr');
 
         headers.forEach(function(header){
             let headCell = document.createElement('th');
@@ -33,18 +33,18 @@
       
 
         data.forEach(function(object) {
-            let row = document.createElement('tr');
+            let rowTable = document.createElement('tr');
 
-            fields.forEach(function(field) {
-                let cell = document.createElement('td');
-                cell.appendChild(document.createTextNode(object[field]))
-                if (typeof object[field] === 'number') {
+            headers.forEach(function(content) {
+                let tableData = document.createElement('td');
+                tableData.appendChild(document.createTextNode(object[content]))
+                if (typeof object[content] === 'number') {
                     cell.style.textAlign = 'right'
                 }
-                row.appendChild(cell)
+                rowTable.appendChild(tableData)
             })
 
-            table.appendChild(row);
+            table.appendChild(rowTable);
         })
 
         return table;
@@ -52,7 +52,7 @@
 
 
       document.getElementById('mountains')
-        .appendChild(buildTable(data))
+        .appendChild(createTable(data))
 
     </script>
   </body>
